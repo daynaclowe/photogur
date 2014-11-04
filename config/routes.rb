@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # get 'pictures/' => 'pictures#picture0'
   # get 'pictures/1' => 'pictures#pictures1'
   # get 'pictures/2' => 'pictures#pictures2'
-
+  get 'pictures/new' => 'pictures#new'
   get 'pictures/:id' => 'pictures#show', as: 'picture'
  end
 
