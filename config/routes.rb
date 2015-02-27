@@ -1,20 +1,24 @@
 Rails.application.routes.draw do
-  
-  get 'pictures' => 'pictures#index'
-  post 'pictures' => 'pictures#create'
-
-  get 'pictures/:id/edit' => 'pictures#edit', as: 'edit_picture'
-  patch 'pictures/:id' => 'pictures#update'
-  # get 'pictures/' => 'pictures#picture0'
-  # get 'pictures/1' => 'pictures#pictures1'
-  # get 'pictures/2' => 'pictures#pictures2'
-  get 'pictures/new' => 'pictures#new'
-
-  get 'pictures/:id' => 'pictures#show', as: 'picture'
-
-  delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
-
   root 'pictures#index'
+  resources :pictures
+  
+  # get 'pictures' => 'pictures#index'
+  # post 'pictures' => 'pictures#create'
+
+  # get 'pictures/:id/edit' => 'pictures#edit', as: 'edit_picture'
+  # patch 'pictures/:id' => 'pictures#update'
+  
+    # get 'pictures/' => 'pictures#picture0'
+    # get 'pictures/1' => 'pictures#pictures1'
+    # get 'pictures/2' => 'pictures#pictures2'
+  
+  # get 'pictures/new' => 'pictures#new'
+
+  # get 'pictures/:id' => 'pictures#show', as: 'picture'
+
+  # delete 'pictures/:id' => 'pictures#destroy', as: "delete_picture"
+
+
  end
 
   # The priority is based upon order of creation: first created -> highest priority.
